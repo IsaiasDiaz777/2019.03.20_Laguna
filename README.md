@@ -3,7 +3,7 @@
 <br/>
 
 <a href="https://wrappixel.com/demos/ui-kit/wrapkit-free/wrapkit/index.html">
-    <img src="https://wrappixel.com/wp-content/uploads/edd/2017/11/wrapkit-free.jpg"/>
+    <img src="https://www.wrappixel.com/wp-content/uploads/2019/01/wrappixel-logo.png"/>
 </a>
 
 WrapKit Lite es un kit gratuito de interfaz de usuario (UI) web de Bootstrap 4. Le permite crear cualquier cosa, como sitios web completos, páginas de destino, próximamente, páginas de inicio, etc. Viene con algunos bloques y elementos UI listos para usar para hacer su vida aún más fácil de usar directamente para sus proyectos. WrapKit Lite se basa en Bootstrap 4, que es un Framework CSS sensible.
