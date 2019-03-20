@@ -35,6 +35,16 @@ $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
     return true;
 });
 
+// 2
+$('a').on('click', function (event) {
+    var $anchor = $(this);
+    $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top - 90
+    }, 1000);
+    event.preventDefault();
+    // code
+});
+
 //Tabla editable 1 ADD
 var $TABLE = $('#table');
 var $BTN = $('#export-btn');

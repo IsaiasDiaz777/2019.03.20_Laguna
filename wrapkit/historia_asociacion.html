@@ -287,17 +287,6 @@
     <script src="../assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!--Custom JavaScript =============================== -->
     <script src="js/custom.js"></script>
-    <!-- This page plugins =============================== -->
-    <script>
-        $('a').on('click', function (event) {
-            var $anchor = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $($anchor.attr('href')).offset().top - 90
-            }, 1000);
-            event.preventDefault();
-            // code
-        });
-    </script>
 </body>
 
 </html>
