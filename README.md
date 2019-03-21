@@ -3,7 +3,7 @@
 <br/>
 
 <a href="https://wrappixel.com/demos/ui-kit/wrapkit-free/wrapkit/index.html">
-    <img src="https://wrappixel.com/wp-content/uploads/edd/2017/11/wrapkit-free.jpg"/>
+    <img src="https://www.wrappixel.com/wp-content/uploads/2019/01/wrappixel-logo.png"/>
 </a>
 
 WrapKit Lite es un kit gratuito de interfaz de usuario (UI) web de Bootstrap 4. Le permite crear cualquier cosa, como sitios web completos, páginas de destino, próximamente, páginas de inicio, etc. Viene con algunos bloques y elementos UI listos para usar para hacer su vida aún más fácil de usar directamente para sus proyectos. WrapKit Lite se basa en Bootstrap 4, que es un Framework CSS sensible.
@@ -23,23 +23,12 @@ Nuestras secciones listas para usar le permitirán simplemente arrastrarlo y sol
 
 <h3><a href="https://wrappixel.com/templates/wrapkit/">Ver demostración en vivo de la versión Pro</a></h3>
 
-
-                                        <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
-                                                href="#"> <i class="fa fa-angle-down m-l-5"></i></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">General</a></li>
-                                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
-                                                        href="#">Categorías <i class="fa fa-angle-down m-l-5"></i></a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="#">Tercera Infantil</a></li>
-                                                        <li><a class="dropdown-item" href="#">Segunda Infantil</a></li>
-                                                        <li><a class="dropdown-item" href="#">Primera Infantil</a></li>
-                                                        <li><a class="dropdown-item" href="#">Juvenil</a></li>
-                                                        <li><a class="dropdown-item" href="#">Primera Adulto</a></li>
-                                                        <li><a class="dropdown-item" href="#">Segunda Adulto</a></li>
-                                                        <li><a class="dropdown-item" href="#">Reserva</a></li>
-                                                        <li><a class="dropdown-item" href="#">Senior</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
+/Categorías
+Tercera Infantil
+Segunda Infantil
+Primera Infantil
+Juvenil
+Primera Adulto
+Segunda Adulto
+Reserva
+Senior
