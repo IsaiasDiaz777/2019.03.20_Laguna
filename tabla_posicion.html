@@ -53,7 +53,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="h1-dropdown" data-toggle="dropdown"
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
                                         aria-haspopup="true" aria-expanded="false">
                                         <strong>Institución</strong> <i class="fa fa-angle-down m-l-5"></i>
                                     </a>
@@ -64,7 +64,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="h1-dropdown" data-toggle="dropdown"
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
                                         aria-haspopup="true" aria-expanded="false">
                                         <strong>Área deportiva</strong> <i class="fa fa-angle-down m-l-5"></i>
                                     </a>
@@ -146,19 +146,50 @@
                                 <div class="col-md-12">
                                     <div class="navbar-collapse">
                                         <!-- Button trigger modal -->
-                                        <button type="button"
-                                            class="btn btn-sm waves-effect waves-light btn-rounded btn-info">General</button>
-                                        <button type="button"
-                                            class="btn btn-sm waves-effect waves-light btn-rounded btn-info">Categorías</button>
-                                        <button type="button"
-                                            class="btn btn-sm waves-effect waves-light btn-rounded btn-danger-gradiant">Eliminar</button>
-                                        <button type="button"
-                                            class="btn btn-sm waves-effect waves-light btn-rounded btn-success-gradiant"
-                                            data-toggle="modal" data-target="#exampleModalCenter">Modificar</button>
+                                        <div id="edit" name="edit">
+                                            <button type="button"
+                                                class="btn btn-sm waves-effect waves-light btn-rounded btn-info">General</button>
+                                            <button type="button"
+                                                class="btn btn-sm waves-effect waves-light btn-rounded btn-info">Categorías</button>
+                                            <button type="button"
+                                                class="btn btn-sm waves-effect waves-light btn-rounded btn-danger-gradiant"
+                                                id="EM" name="EM" data-toggle="modal"
+                                                data-target="#M_D">Eliminar</button>
+                                            <button type="button"
+                                                class="btn btn-sm waves-effect waves-light btn-rounded btn-success-gradiant"
+                                                data-toggle="modal" data-target="#exampleModalCenter" id=""
+                                                name="">Modificar</button>
+                                        </div>
                                         <!-- ./Button trigger modal -->
+
                                         <!-- Modal -->
+                                        <div class="modal fade" id="M_D" tabindex="-1" role="dialog"
+                                            aria-labelledby="M_DTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLongTitle">Eliminar
+                                                        </h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h5>¿Estas seguro o segura que quieres eliminar esta fila con
+                                                            sus datos?</h5>
+                                                        <button type="button" class="btn btn-danger">Continuar
+                                                            accion</button>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Omitir acción</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -171,17 +202,78 @@
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        Formulario
+                                                        <form class="row">
+                                                            <div class="form-group col-md-6">
+                                                                <label for="form_modal">Posición</label>
+                                                                <input type="text" class="form-control" id="form_modal0"
+                                                                    nombre="form_modal1" placeholder="">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="form_modal">Club</label>
+                                                                <input type="text" class="form-control" id="form_modal1"
+                                                                    placeholder="">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="form_modal">Puntos</label>
+                                                                <input type="text" class="form-control" id="form_modal2"
+                                                                    placeholder="">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="form_modal">Partidos Jugados</label>
+                                                                <input type="text" class="form-control" id="form_modal3"
+                                                                    placeholder="">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="form_modal">Partidos Ganados</label>
+                                                                <input type="text" class="form-control" id="form_modal4"
+                                                                    placeholder="">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="form_modal">Partidos Empatados</label>
+                                                                <input type="text" class="form-control" id="form_modal5"
+                                                                    placeholder="">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="form_modal">Partidos Perdidos</label>
+                                                                <input type="text" class="form-control" id="form_modal6"
+                                                                    placeholder="">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="form_modal">Goles a favor</label>
+                                                                <input type="text" class="form-control" id="form_modal7"
+                                                                    placeholder="">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="form_modal">Goles en contra</label>
+                                                                <input type="text" class="form-control" id="form_modal8"
+                                                                    placeholder="">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="form_modal">Diferencias de Goles</label>
+                                                                <input type="text" class="form-control" id="form_modal9"
+                                                                    placeholder="">
+                                                            </div>
+                                                            <div class="form-group col-md-12">
+                                                                <div class="checkbox checkbox-success">
+                                                                    <input id="checkbox1" type="checkbox">
+                                                                    <label for="checkbox1"> Recordarme </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <button type="submit"
+                                                                    class="btn btn-success waves-effect waves-light m-r-10">Guardar
+                                                                    cambios</button>
+                                                            </div>
+                                                        </form>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
-                                                            data-dismiss="modal">Cerrar</button>
-                                                        <button type="button" class="btn btn-primary">Guardar
-                                                            cambios</button>
+                                                            data-dismiss="modal">Omitir cambios y cerrar</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- ./Modal -->
                                     </div>
                                     <div class="table-responsive">
                                         <table class="table table- table-hover table-responsive">
@@ -208,12 +300,10 @@
                                                         title="Goles en contra">GC</th>
                                                     <th data-toggle="tooltip" data-placement="top"
                                                         title="Diferencias de Goles">DIF</th>
-                                                    <th data-toggle="tooltip" data-placement="top"
-                                                        title="Accion Administracon">Acciones</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
+                                                <tr class="boton">
                                                     <td>1</td>
                                                     <td>Club A</td>
                                                     <td>12</td>
@@ -224,9 +314,8 @@
                                                     <td>8</td>
                                                     <td>4</td>
                                                     <td>4</td>
-                                                    <td class="boton"></td>
                                                 </tr>
-                                                <tr>
+                                                <tr class="boton">
                                                     <td>2</td>
                                                     <td>Club B</td>
                                                     <td>12</td>
@@ -237,38 +326,15 @@
                                                     <td>8</td>
                                                     <td>4</td>
                                                     <td>4</td>
-                                                    <td class="boton"></td>
                                                 </tr>
                                             </tbody>
-                                            <thead>
-                                                <tr>
-                                                    <th data-toggle="tooltip" data-placement="bottom" title="Posición">
-                                                        POS
-                                                    </th>
-                                                    <th data-toggle="tooltip" data-placement="bottom" title="Club">CLUB
-                                                    </th>
-                                                    <th data-toggle="tooltip" data-placement="bottom" title="Puntos">PTS
-                                                    </th>
-                                                    <th data-toggle="tooltip" data-placement="bottom"
-                                                        title="Partidos Jugados">PJ</th>
-                                                    <th data-toggle="tooltip" data-placement="bottom"
-                                                        title="Partidos Ganados">PG</th>
-                                                    <th data-toggle="tooltip" data-placement="bottom"
-                                                        title="Partidos Empatados">PE</th>
-                                                    <th data-toggle="tooltip" data-placement="bottom"
-                                                        title="Partidos Perdidos">PP</th>
-                                                    <th data-toggle="tooltip" data-placement="bottom"
-                                                        title="Goles a favor">GF</th>
-                                                    <th data-toggle="tooltip" data-placement="bottom"
-                                                        title="Goles en contra">GC</th>
-                                                    <th data-toggle="tooltip" data-placement="bottom"
-                                                        title="Diferencias de Goles">DIF</th>
-                                                    <th data-toggle="tooltip" data-placement="bottom"
-                                                        title="Accion Administracon">Acciones</th>
-                                                </tr>
-                                            </thead>
                                         </table>
                                     </div>
+                                    <form id="form1" name="form1">
+                                        <input type="checkbox" name="condicion" id="condicion"
+                                            onclick="checkifempty()" />
+                                        <input type="submit" name="registrarse" id="registrarse">
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -312,7 +378,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="d-flex font-14">
-                                <div class="m-t-10 m-b-10 copyright">Copyright &#169; 2019 <a href="http://www..com/"
+                                <div class="m-t-10 m-b-10 copyright">Copyright &#169; 2019 <a href="http://www.a.com/"
                                         target="_blank">Web</a>. Todos los derechos reservados.</div>
                                 <div class="links ml-auto m-t-10 m-b-10">
                                     <a href="#" class="p-10 p-l-0">Terminos de uso</a>
@@ -327,7 +393,6 @@
             </div>
         </div>
         <!-- End footer =============================== -->
-
         <!-- Back to top =============================== -->
         <a class="bt-top btn btn-circle btn-lg btn-info" href="#top"><i class="ti-arrow-up"></i></a>
     </div>
@@ -343,32 +408,35 @@
     <!-- This page plugins =============================== -->
     <script>
         window.onload = function () {
-            // creamos los eventos para cada elemento con la clase "click_talble_edit"
+
+            //Obtener
             let elementos = document.getElementsByClassName("boton");
+
+            //Habilitar botones de eliminacion y modificacion
+            document.edit.EM.disabled = true;
+
+            //Llenar los valores
             for (let i = 0; i < elementos.length; i++) {
-                // cada vez que se haga clic sobre cualquier de los elementos,
-                // ejecutamos la función obtenerValores()
-                elementos[i].addEventListener("click", obtenerValores);
-                style.backgroundColor("#fff").addEventListener("click", obtenerValores);
+                //Obtener valores de la columna TD seleccionada
+                elementos[i].addEventListener("click", function (e) {
+                    var elementosTD = e.srcElement.parentElement.getElementsByTagName("td");
+
+                    //Ingrsar valores
+                    for (let i = 0; i < elementosTD.length; i++) {
+                        var inputNombre = document.getElementById("form_modal" + i.toString());
+                        inputNombre.value = elementosTD[i].innerHTML;
+                    }
+                })
             }
         }
 
-        // funcion que se ejecuta cada vez que se hace clic
-        function obtenerValores(e) {
-            var valores = "";
-
-            // vamos al elemento padre (<tr>) y buscamos todos los elementos <td>
-            // que contenga el elemento padre
-            var elementosTD = e.srcElement.parentElement.getElementsByTagName("td");
-
-            // recorremos cada uno de los elementos del array de elementos <td>
-            for (let i = 0; i < elementosTD.length; i++) {
-
-                // obtenemos cada uno de los valores y los ponemos en la variable "valores"
-                valores += elementosTD[i].innerHTML + "\n";
+        function checkifempty() {
+            if (!document.form1.condicion.checked) {
+                document.form1.registrarse.disabled = true;
             }
-
-            alert(valores);
+            else {
+                document.form1.registrarse.disabled = false;
+            }
         }
     </script>
 
