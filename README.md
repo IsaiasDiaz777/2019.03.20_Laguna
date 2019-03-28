@@ -14,7 +14,6 @@ Nuestras secciones listas para usar le permitirán simplemente arrastrarlo y sol
 
 <h3><a href="https://wrappixel.com/demos/ui-kit/wrapkit-free/wrapkit/index.html">Revise la demostración en vivo</a></h3>
 
-
 <h2>La versión Pro de Wrapkit también está disponible - echa un vistazo a la vista previa en vivo</h2>
 
 <a href="https://wrappixel.com/templates/wrapkit/">
@@ -22,13 +21,3 @@ Nuestras secciones listas para usar le permitirán simplemente arrastrarlo y sol
 </a>
 
 <h3><a href="https://wrappixel.com/templates/wrapkit/">Ver demostración en vivo de la versión Pro</a></h3>
-
-/Categorías
-Tercera Infantil
-Segunda Infantil
-Primera Infantil
-Juvenil
-Primera Adulto
-Segunda Adulto
-Reserva
-Senior

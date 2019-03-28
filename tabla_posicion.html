@@ -136,29 +136,26 @@
             </div>
             <!-- End Static Slider 10 =============================== -->
             <!--NEW-->
-            <!-- Editable table -->
             <div class="spacer">
                 <div class="container">
-                    <div class="row bg-light">
-                        <div class="container">
-                            <!-- ./Modal -->
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="navbar-collapse">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 text-center">
+                            <div class="card card-shadow">
+                                <div class="card-body">
+                                    <h1 class="title font-bold">Acciones administrativas</h1>
+                                    <!-- Botones JavaScript -->
+                                    <div class="title font-bold">
                                         <!-- Button trigger modal -->
-                                        <div id="edit" name="edit">
-                                            <button type="button"
-                                                class="btn btn-sm waves-effect waves-light btn-rounded btn-info">General</button>
-                                            <button type="button"
-                                                class="btn btn-sm waves-effect waves-light btn-rounded btn-info">Categorías</button>
-                                            <button type="button"
-                                                class="btn btn-sm waves-effect waves-light btn-rounded btn-danger-gradiant"
-                                                id="EM" name="EM" data-toggle="modal"
-                                                data-target="#M_D">Eliminar</button>
+                                        <div id="edit">
                                             <button type="button"
                                                 class="btn btn-sm waves-effect waves-light btn-rounded btn-success-gradiant"
-                                                data-toggle="modal" data-target="#exampleModalCenter" id=""
-                                                name="">Modificar</button>
+                                                data-toggle="modal" data-target="#M_M" class="agregar">Agregar</button>
+                                            <button type="button"
+                                                class="btn btn-sm waves-effect waves-light btn-rounded btn-info-gradiant"
+                                                id="EU" data-toggle="modal" data-target="#M_M">Modificar</button>
+                                            <button type="button"
+                                                class="btn btn-sm waves-effect waves-light btn-rounded btn-danger-gradiant"
+                                                id="EM" data-toggle="modal" data-target="#M_D">Eliminar</button>
                                         </div>
                                         <!-- ./Button trigger modal -->
 
@@ -176,7 +173,7 @@
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <h5>¿Estas seguro o segura que quieres eliminar esta fila con
+                                                        <h5>¿Estas seguro, segura que quieres eliminar esta fila con
                                                             sus datos?</h5>
                                                         <button type="button" class="btn btn-danger">Continuar
                                                             accion</button>
@@ -188,8 +185,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                                            aria-hidden="true">
+                                        <div class="modal fade" id="M_M" tabindex="-1" role="dialog"
+                                            aria-labelledby="M_MTitle" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -275,66 +272,76 @@
                                         </div>
                                         <!-- ./Modal -->
                                     </div>
-                                    <div class="table-responsive">
-                                        <table class="table table- table-hover table-responsive">
-                                            <caption>Tabla de pociciones</caption>
-                                            <thead>
-                                                <tr>
-                                                    <th data-toggle="tooltip" data-placement="top" title="Posición">POS
-                                                    </th>
-                                                    <th data-toggle="tooltip" data-placement="top" title="Club">CLUB
-                                                    </th>
-                                                    <th data-toggle="tooltip" data-placement="top" title="Puntos">PTS
-                                                    </th>
-                                                    <th data-toggle="tooltip" data-placement="top"
-                                                        title="Partidos Jugados">PJ</th>
-                                                    <th data-toggle="tooltip" data-placement="top"
-                                                        title="Partidos Ganados">PG</th>
-                                                    <th data-toggle="tooltip" data-placement="top"
-                                                        title="Partidos Empatados">PE</th>
-                                                    <th data-toggle="tooltip" data-placement="top"
-                                                        title="Partidos Perdidos">PP</th>
-                                                    <th data-toggle="tooltip" data-placement="top"
-                                                        title="Goles a favor">GF</th>
-                                                    <th data-toggle="tooltip" data-placement="top"
-                                                        title="Goles en contra">GC</th>
-                                                    <th data-toggle="tooltip" data-placement="top"
-                                                        title="Diferencias de Goles">DIF</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="boton">
-                                                    <td>1</td>
-                                                    <td>Club A</td>
-                                                    <td>12</td>
-                                                    <td>5</td>
-                                                    <td>4</td>
-                                                    <td>0</td>
-                                                    <td>1</td>
-                                                    <td>8</td>
-                                                    <td>4</td>
-                                                    <td>4</td>
-                                                </tr>
-                                                <tr class="boton">
-                                                    <td>2</td>
-                                                    <td>Club B</td>
-                                                    <td>12</td>
-                                                    <td>5</td>
-                                                    <td>4</td>
-                                                    <td>0</td>
-                                                    <td>1</td>
-                                                    <td>8</td>
-                                                    <td>4</td>
-                                                    <td>4</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <form id="form1" name="form1">
-                                        <input type="checkbox" name="condicion" id="condicion"
-                                            onclick="checkifempty()" />
-                                        <input type="submit" name="registrarse" id="registrarse">
-                                    </form>
+                                    <!-- ./Botones JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Editable table -->
+            <div class="container">
+                <div class="row bg-light">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="navbar-collapse table-responsive">
+                                    <table class="table table- table-hover table-responsive">
+                                        <caption>Tabla de pociciones</caption>
+                                        <thead>
+                                            <tr>
+                                                <th data-toggle="tooltip" data-placement="top" title="Posición">
+                                                    POS
+                                                </th>
+                                                <th data-toggle="tooltip" data-placement="top" title="Club">CLUB
+                                                </th>
+                                                <th data-toggle="tooltip" data-placement="top" title="Puntos">
+                                                    PTS
+                                                </th>
+                                                <th data-toggle="tooltip" data-placement="top"
+                                                    title="Partidos Jugados">PJ</th>
+                                                <th data-toggle="tooltip" data-placement="top"
+                                                    title="Partidos Ganados">PG</th>
+                                                <th data-toggle="tooltip" data-placement="top"
+                                                    title="Partidos Empatados">PE</th>
+                                                <th data-toggle="tooltip" data-placement="top"
+                                                    title="Partidos Perdidos">PP</th>
+                                                <th data-toggle="tooltip" data-placement="top"
+                                                    title="Goles a favor">GF</th>
+                                                <th data-toggle="tooltip" data-placement="top"
+                                                    title="Goles en contra">GC</th>
+                                                <th data-toggle="tooltip" data-placement="top"
+                                                    title="Diferencias de Goles">DIF</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="boton">
+                                                <td>1</td>
+                                                <td>Club A</td>
+                                                <td>12</td>
+                                                <td>5</td>
+                                                <td>4</td>
+                                                <td>0</td>
+                                                <td>1</td>
+                                                <td>8</td>
+                                                <td>4</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr class="boton">
+                                                <td>2</td>
+                                                <td>Club B</td>
+                                                <td>12</td>
+                                                <td>5</td>
+                                                <td>4</td>
+                                                <td>0</td>
+                                                <td>1</td>
+                                                <td>8</td>
+                                                <td>4</td>
+                                                <td>4</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
                                 </div>
                             </div>
                         </div>
@@ -408,20 +415,26 @@
     <!-- This page plugins =============================== -->
     <script>
         window.onload = function () {
+            LlenarDatos();
+            LimpiarInput();
+        }
 
-            //Obtener
+        //Obtiene los datos de la fila en la tabla , para luego escribirlos en el modal
+        function LlenarDatos() {
+
+            //Obtener del boton
             let elementos = document.getElementsByClassName("boton");
 
-            //Habilitar botones de eliminacion y modificacion
-            document.edit.EM.disabled = true;
-
-            //Llenar los valores
+            //Recorres los valores
             for (let i = 0; i < elementos.length; i++) {
+
                 //Obtener valores de la columna TD seleccionada
                 elementos[i].addEventListener("click", function (e) {
+
+                    //Obtener los datos de cada TD
                     var elementosTD = e.srcElement.parentElement.getElementsByTagName("td");
 
-                    //Ingrsar valores
+                    //Llenar valores
                     for (let i = 0; i < elementosTD.length; i++) {
                         var inputNombre = document.getElementById("form_modal" + i.toString());
                         inputNombre.value = elementosTD[i].innerHTML;
@@ -430,12 +443,11 @@
             }
         }
 
-        function checkifempty() {
-            if (!document.form1.condicion.checked) {
-                document.form1.registrarse.disabled = true;
-            }
-            else {
-                document.form1.registrarse.disabled = false;
+        //Deja vacio los inputs del modal
+        function LimpiarInput() {
+            for (let i = 0; i < 10; i++) {
+                var inputNombre = document.getElementById("form_modal" + i.toString());
+                inputNombre.value = "";
             }
         }
     </script>
