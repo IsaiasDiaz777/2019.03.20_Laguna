@@ -149,13 +149,11 @@
                                         <div id="edit">
                                             <button type="button"
                                                 class="btn btn-sm waves-effect waves-light btn-rounded btn-success-gradiant"
-                                                data-toggle="modal" data-target="#M_M" class="agregar">Agregar</button>
+                                                data-toggle="modal" data-target="#M_M" class="agregar"
+                                                onclick="LimpiarInput()">Agregar</button>
                                             <button type="button"
                                                 class="btn btn-sm waves-effect waves-light btn-rounded btn-info-gradiant"
                                                 id="EU" data-toggle="modal" data-target="#M_M">Modificar</button>
-                                            <button type="button"
-                                                class="btn btn-sm waves-effect waves-light btn-rounded btn-danger-gradiant"
-                                                id="EM" data-toggle="modal" data-target="#M_D">Eliminar</button>
                                         </div>
                                         <!-- ./Button trigger modal -->
 
@@ -250,12 +248,6 @@
                                                                 <input type="text" class="form-control" id="form_modal9"
                                                                     placeholder="">
                                                             </div>
-                                                            <div class="form-group col-md-12">
-                                                                <div class="checkbox checkbox-success">
-                                                                    <input id="checkbox1" type="checkbox">
-                                                                    <label for="checkbox1"> Recordarme </label>
-                                                                </div>
-                                                            </div>
                                                             <div class="col-md-12">
                                                                 <button type="submit"
                                                                     class="btn btn-success waves-effect waves-light m-r-10">Guardar
@@ -286,7 +278,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="navbar-collapse table-responsive">
-                                    <table class="table table- table-hover table-responsive">
+                                    <table id="myTable" class="table table- table-hover table-responsive">
                                         <caption>Tabla de pociciones</caption>
                                         <thead>
                                             <tr>
@@ -298,20 +290,22 @@
                                                 <th data-toggle="tooltip" data-placement="top" title="Puntos">
                                                     PTS
                                                 </th>
-                                                <th data-toggle="tooltip" data-placement="top"
-                                                    title="Partidos Jugados">PJ</th>
-                                                <th data-toggle="tooltip" data-placement="top"
-                                                    title="Partidos Ganados">PG</th>
+                                                <th data-toggle="tooltip" data-placement="top" title="Partidos Jugados">
+                                                    PJ</th>
+                                                <th data-toggle="tooltip" data-placement="top" title="Partidos Ganados">
+                                                    PG</th>
                                                 <th data-toggle="tooltip" data-placement="top"
                                                     title="Partidos Empatados">PE</th>
                                                 <th data-toggle="tooltip" data-placement="top"
                                                     title="Partidos Perdidos">PP</th>
-                                                <th data-toggle="tooltip" data-placement="top"
-                                                    title="Goles a favor">GF</th>
-                                                <th data-toggle="tooltip" data-placement="top"
-                                                    title="Goles en contra">GC</th>
+                                                <th data-toggle="tooltip" data-placement="top" title="Goles a favor">GF
+                                                </th>
+                                                <th data-toggle="tooltip" data-placement="top" title="Goles en contra">
+                                                    GC</th>
                                                 <th data-toggle="tooltip" data-placement="top"
                                                     title="Diferencias de Goles">DIF</th>
+                                                <th data-toggle="tooltip" data-placement="top" title="Acción">Acción
+                                                </th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -326,8 +320,14 @@
                                                 <td>8</td>
                                                 <td>4</td>
                                                 <td>4</td>
+                                                <td>
+                                                    <button type="button"
+                                                        class="btn btn-sm waves-effect waves-light btn-rounded btn-danger-gradiant"
+                                                        id="EM" data-toggle="modal" data-target="#M_D">Eliminar</button>
+                                                    <input type="button" value="Delete" onclick="EliminarTR(this)">
+                                                </td>
                                             </tr>
-                                            <tr class="boton">
+                                            <tr>
                                                 <td>2</td>
                                                 <td>Club B</td>
                                                 <td>12</td>
@@ -338,6 +338,13 @@
                                                 <td>8</td>
                                                 <td>4</td>
                                                 <td>4</td>
+                                                <td class="boton">Tomar valores de la fila</td>
+                                                <td>
+                                                    <button type="button"
+                                                        class="btn btn-sm waves-effect waves-light btn-rounded btn-danger-gradiant"
+                                                        id="EM" data-toggle="modal" data-target="#M_D">Eliminar</button>
+                                                    <input type="button" value="Delete" onclick="EliminarTR(this)">
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -414,13 +421,25 @@
     <script src="js/custom.js"></script>
     <!-- This page plugins =============================== -->
     <script>
+
+        //Variaveles
+        var aYm;
+        var e;
+
         window.onload = function () {
-            LlenarDatos();
+            EscucharClickTD();
+            LlenarDatosInput();
             LimpiarInput();
+            EliminarTR();
+        }
+
+        //Esta atento a los CLICK de la tabla para tomar sus datos del TR
+        function EscucharClickTD() {
+
         }
 
         //Obtiene los datos de la fila en la tabla , para luego escribirlos en el modal
-        function LlenarDatos() {
+        function LlenarDatosInput() {
 
             //Obtener del boton
             let elementos = document.getElementsByClassName("boton");
@@ -433,6 +452,7 @@
 
                     //Obtener los datos de cada TD
                     var elementosTD = e.srcElement.parentElement.getElementsByTagName("td");
+                    // var elementosTD = e.srcElement.parentNode.parentNode.rowIndex
 
                     //Llenar valores
                     for (let i = 0; i < elementosTD.length; i++) {
@@ -449,6 +469,17 @@
                 var inputNombre = document.getElementById("form_modal" + i.toString());
                 inputNombre.value = "";
             }
+        }
+
+        //Eliminar fila
+        function EliminarTR(r) {
+            var i = r.parentNode.parentNode.rowIndex;
+            document.getElementById("myTable").deleteRow(i);
+        }
+
+        //Agregar fila
+        function AgregarTR(r) {
+
         }
     </script>
 
