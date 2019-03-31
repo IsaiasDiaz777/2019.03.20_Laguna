@@ -4,33 +4,33 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Tell the browser to be responsive to screen width =============================== -->
+    <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- Favicon icon =============================== -->
+    <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <title>La Laguna</title>
-    <!-- Bootstrap Core CSS =============================== -->
+    <!-- Bootstrap Core CSS -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="scss/icons/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- This page CSS =============================== -->
-    <!-- Custom CSS =============================== -->
+    <!-- This page CSS -->
+    <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/index-landingpage/landing-page.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries =============================== -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// =============================== -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]=============================== -->
+    <![endif] -->
 </head>
 
 <body class="">
 
-    <!-- Main wrapper - style you can find in pages.scss =============================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
     <div id="main-wrapper">
-        <!-- Top header =============================== -->
+        <!-- Top header -->
         <div class="topbar" id="top">
             <div class="header6">
                 <div class="container po-relative">
@@ -117,24 +117,24 @@
                 </div>
             </div>
         </div>
-        <!-- End Top header =============================== -->
+        <!-- End Top header -->
         <div class="container-fluid">
-            <!-- Static Slider 10 =============================== -->
+            <!-- Static Slider 10 -->
             <div class="static-slider-head" style="background-image:url(images/static-slider/slider10/img1.jpg)">
                 <div class="container">
-                    <!-- Row =============================== -->
+                    <!-- Row -->
                     <div class="row justify-content-center">
-                        <!-- Column =============================== -->
+                        <!-- Column -->
                         <div class="col-lg-8 col-md-6 align-self-center text-center" data-aos="fade-up"
                             data-aos-duration="1500">
                             <h1 class="title">Tabla Posiciones</h1>
                         </div>
-                        <!-- Column =============================== -->
+                        <!-- Column -->
                     </div>
                     <i class="pe-7s-angle-down-circle"> </i>
                 </div>
             </div>
-            <!-- End Static Slider 10 =============================== -->
+            <!-- End Static Slider 10 -->
             <!--NEW-->
             <div class="spacer">
                 <div class="container">
@@ -143,19 +143,9 @@
                             <div class="card card-shadow">
                                 <div class="card-body">
                                     <h1 class="title font-bold">Acciones administrativas</h1>
+
                                     <!-- Botones JavaScript -->
                                     <div class="title font-bold">
-                                        <!-- Button trigger modal -->
-                                        <div id="edit">
-                                            <button type="button"
-                                                class="btn btn-sm waves-effect waves-light btn-rounded btn-success-gradiant"
-                                                data-toggle="modal" data-target="#M_M" class="agregar"
-                                                onclick="LimpiarInput()">Agregar</button>
-                                            <button type="button"
-                                                class="btn btn-sm waves-effect waves-light btn-rounded btn-info-gradiant"
-                                                id="EU" data-toggle="modal" data-target="#M_M">Modificar</button>
-                                        </div>
-                                        <!-- ./Button trigger modal -->
 
                                         <!-- Modal -->
                                         <div class="modal fade" id="M_D" tabindex="-1" role="dialog"
@@ -173,12 +163,12 @@
                                                     <div class="modal-body">
                                                         <h5>¿Estas seguro, segura que quieres eliminar esta fila con
                                                             sus datos?</h5>
-                                                        <button type="button" class="btn btn-danger">Continuar
-                                                            accion</button>
+                                                        <button type="button" class="btn btn-danger"
+                                                            onclick="EliminarTR2()">Continuar</button>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
-                                                            data-dismiss="modal">Omitir acción</button>
+                                                            data-dismiss="modal">Cerrar</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -250,14 +240,14 @@
                                                             </div>
                                                             <div class="col-md-12">
                                                                 <button type="submit"
-                                                                    class="btn btn-success waves-effect waves-light m-r-10">Guardar
+                                                                    class="btn btn-success waves-effect waves-light m-r-10" onclick="AgregarTR()">Guardar
                                                                     cambios</button>
                                                             </div>
                                                         </form>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
-                                                            data-dismiss="modal">Omitir cambios y cerrar</button>
+                                                            data-dismiss="modal">Cerrar</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -304,12 +294,18 @@
                                                     GC</th>
                                                 <th data-toggle="tooltip" data-placement="top"
                                                     title="Diferencias de Goles">DIF</th>
-                                                <th data-toggle="tooltip" data-placement="top" title="Acción">Acción
+                                                <th data-toggle="tooltip" data-placement="top" title="Acción">Acciónes
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button"
+                                                        class="btn btn-sm waves-effect waves-light btn-rounded btn-success-gradiant"
+                                                        data-toggle="modal" data-target="#M_M" class="agregar"
+                                                        onclick="LimpiarInput()">Agregar</button>
+                                                    <!-- ./Button trigger modal -->
                                                 </th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="boton">
+                                            <tr>
                                                 <td>1</td>
                                                 <td>Club A</td>
                                                 <td>12</td>
@@ -320,11 +316,15 @@
                                                 <td>8</td>
                                                 <td>4</td>
                                                 <td>4</td>
-                                                <td>
+                                                <td class="tomarDatos">
                                                     <button type="button"
                                                         class="btn btn-sm waves-effect waves-light btn-rounded btn-danger-gradiant"
-                                                        id="EM" data-toggle="modal" data-target="#M_D">Eliminar</button>
-                                                    <input type="button" value="Delete" onclick="EliminarTR(this)">
+                                                        id="EM" data-toggle="modal" data-target="#M_D"
+                                                        onclick="EliminarTR1(this)">Eliminar</button>
+                                                    <button type=""
+                                                        class="btn btn-sm waves-effect waves-light btn-rounded btn-info-gradiant"
+                                                        id="EU" data-toggle="modal"
+                                                        data-target="#M_M">Modificar</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -338,12 +338,15 @@
                                                 <td>8</td>
                                                 <td>4</td>
                                                 <td>4</td>
-                                                <td class="boton">Tomar valores de la fila</td>
-                                                <td>
+                                                <td class="tomarDatos">
                                                     <button type="button"
                                                         class="btn btn-sm waves-effect waves-light btn-rounded btn-danger-gradiant"
-                                                        id="EM" data-toggle="modal" data-target="#M_D">Eliminar</button>
-                                                    <input type="button" value="Delete" onclick="EliminarTR(this)">
+                                                        id="EM" data-toggle="modal" data-target="#M_D"
+                                                        onclick="EliminarTR1(this)">Eliminar</button>
+                                                    <button type="button"
+                                                        class="btn btn-sm waves-effect waves-light btn-rounded btn-info-gradiant"
+                                                        id="EU" data-toggle="modal"
+                                                        data-target="#M_M">Modificar</button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -358,8 +361,8 @@
             <!-- Editable table -->
             <!--END NEW-->
         </div>
-        <!-- End Page wrapper =============================== -->
-        <!-- footer =============================== -->
+        <!-- End Page wrapper -->
+        <!-- footer -->
         <div class="footer4 b-t spacer">
             <div class="container">
                 <div class="row">
@@ -398,7 +401,6 @@
                                     <a href="#" class="p-10 p-l-0">Terminos de uso</a>
                                     <a href="#" class="p-10">Nota legal</a>
                                     <a href="#" class="p-10">Política de privacidad</a>
-                                    <!--&#174; &#8482;-->
                                 </div>
                             </div>
                         </div>
@@ -406,83 +408,19 @@
                 </div>
             </div>
         </div>
-        <!-- End footer =============================== -->
-        <!-- Back to top =============================== -->
-        <a class="bt-top btn btn-circle btn-lg btn-info" href="#top"><i class="ti-arrow-up"></i></a>
+        <!-- End footer -->
     </div>
-    <!-- End Main wrapper =============================== -->
+    <!-- End Main wrapper -->
 
-    <!-- All Jquery =============================== -->
+    <!-- All Jquery -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap popper Core JavaScript =============================== -->
+    <!-- Bootstrap popper Core JavaScript -->
     <script src="node_modules/popper/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!--Custom JavaScript =============================== -->
+    <!-- Custom JavaScript -->
     <script src="js/custom.js"></script>
-    <!-- This page plugins =============================== -->
-    <script>
-
-        //Variaveles
-        var aYm;
-        var e;
-
-        window.onload = function () {
-            EscucharClickTD();
-            LlenarDatosInput();
-            LimpiarInput();
-            EliminarTR();
-        }
-
-        //Esta atento a los CLICK de la tabla para tomar sus datos del TR
-        function EscucharClickTD() {
-
-        }
-
-        //Obtiene los datos de la fila en la tabla , para luego escribirlos en el modal
-        function LlenarDatosInput() {
-
-            //Obtener del boton
-            let elementos = document.getElementsByClassName("boton");
-
-            //Recorres los valores
-            for (let i = 0; i < elementos.length; i++) {
-
-                //Obtener valores de la columna TD seleccionada
-                elementos[i].addEventListener("click", function (e) {
-
-                    //Obtener los datos de cada TD
-                    var elementosTD = e.srcElement.parentElement.getElementsByTagName("td");
-                    // var elementosTD = e.srcElement.parentNode.parentNode.rowIndex
-
-                    //Llenar valores
-                    for (let i = 0; i < elementosTD.length; i++) {
-                        var inputNombre = document.getElementById("form_modal" + i.toString());
-                        inputNombre.value = elementosTD[i].innerHTML;
-                    }
-                })
-            }
-        }
-
-        //Deja vacio los inputs del modal
-        function LimpiarInput() {
-            for (let i = 0; i < 10; i++) {
-                var inputNombre = document.getElementById("form_modal" + i.toString());
-                inputNombre.value = "";
-            }
-        }
-
-        //Eliminar fila
-        function EliminarTR(r) {
-            var i = r.parentNode.parentNode.rowIndex;
-            document.getElementById("myTable").deleteRow(i);
-        }
-
-        //Agregar fila
-        function AgregarTR(r) {
-
-        }
-    </script>
-
+    <!-- This page plugins -->
+    <script src="js/tableEditor.js"></script>
 </body>
 
 </html>
